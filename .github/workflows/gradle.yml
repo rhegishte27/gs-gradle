@@ -20,5 +20,7 @@ jobs:
       run: echo "VERSION=$(git describe --exact-match HEAD || echo ${GITHUB_REF##*/})" >> $GITHUB_ENV
     - name: env
       run: echo ${GITHUB_REPOSITORY##*/}
+    - name: buid id
+      run: echo ${{ github.run_id }}
     - name: validating
       run: echo $VERSION 
