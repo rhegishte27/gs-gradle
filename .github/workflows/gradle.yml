@@ -21,6 +21,6 @@ jobs:
     - name: env
       run: echo ${GITHUB_REPOSITORY##*/}
     - name: buid id
-      run: echo ${{ github.run_id }}
+      run: echo ${{ github.run_number }}
     - name: validating
       run: echo $VERSION 
