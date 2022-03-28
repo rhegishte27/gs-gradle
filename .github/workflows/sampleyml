@@ -16,3 +16,7 @@ jobs:
     
     - name: configure
       run: echo `date`
+    - name: Set env
+      run: echo "VERSION=$(git describe --exact-match HEAD || echo ${GITHUB_REF##*/} | sed \'s/\\//-g\')" >> $GITHUB_ENV
+    - name: validating
+      run: echo $VERSION
