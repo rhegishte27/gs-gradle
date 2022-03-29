@@ -25,7 +25,5 @@ jobs:
     - name: validating
       run: echo $VERSION 
     - name: file
-      run: echo ${{ secrets.file }} | base64 -d > .env.production
-    - name: test
-      run: cat .env.production
+      run: echo ${{ secrets.file }} 
   
